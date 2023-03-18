@@ -1,9 +1,65 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "./mobile.scss";
 
-body {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+@media screen and (min-width: 700px ) {
+
+  body{ 
+    font-size: 1rem;
+  }
+  
+  .card-wrap {
+    display: grid;
+    grid-template-areas: 
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+    grid-gap: 1rem;
+    max-width: 90rem;
+  }
+
+  .card {
+    margin: 0;
+    height: 100%;
+    padding: 2.5rem;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    
+    &--daniel {
+      grid-area: daniel;
+    }
+    &--jonathan {
+      grid-area: jonathan;
+    }
+    &--jeanette {
+      grid-area: jeanette;
+    }
+    &--patrick {
+      grid-area: patrick;
+    }
+    &--kira {
+      grid-area: kira;
+    }
+  
+  
+    &__testimonial-heading {
+      color: $White;
+      margin-bottom: 1rem;
+      font-size: 1.35rem;
+  
+      &--jeanette,
+      &--kira {
+        color: $Very-dark-grayish-blue;
+      }
+    }
+  
+    &__testimonial-paragraph {
+      color: $Light-gray;
+      opacity: 70%;
+  
+      &--jeanette,
+      &--kira {
+        color: $Very-dark-grayish-blue;
+      }
+    }
+  }
 }

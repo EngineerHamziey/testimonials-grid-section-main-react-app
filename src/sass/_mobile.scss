@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// global variables
+// primary colors
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+
+// Neutral
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+
+body {
+  // display: none;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 0.8125rem;//equivalent to 13zpx
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  background-color: $Light-grayish-blue;
+  line-height: 1.4;
+}
+
+.App {
+}
+
+.card-wrap {
+  margin: 4rem 0 2rem 0;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 0 0 1.5rem 0;
+  
+  &--daniel {
+    background-color: $Moderate-violet;
+  }
+  &--jonathan {
+    background-color: $Very-dark-grayish-blue;
+  }
+  &--jeanette {
+    background-color: $White
+  }
+  &--patrick {
+    background-color: $Very-dark-blackish-blue;
+  }
+  &--kira {
+    background-color: $White;
+  }
+
+
+  &__testimonial-heading {
+    color: $White;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+
+    &--jeanette,
+    &--kira {
+      color: $Very-dark-grayish-blue;
+    }
+  }
+
+  &__testimonial-paragraph {
+    color: $Light-gray;
+    opacity: 70%;
+
+    &--jeanette,
+    &--kira {
+      color: $Very-dark-grayish-blue;
+    }
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+
+  &__title {
+    // display: none;
+    margin: auto 0 auto 0.7rem;
+  }
+
+  &__name {
+    // margin-bottom: 0.3rem;
+    font-size: 1rem;
+    color: $Light-gray;
+
+    &--jeanette,
+    &--kira {
+      color: $Very-dark-grayish-blue;
+    }
+  }
+
+  &__tag {
+    font-size: 0.9rem;
+    color: $Light-gray;
+    opacity: 50%;
+
+    &--jeanette,
+    &--kira {
+      opacity: 100%;
+    }
+  }
+}
+
+.img--user {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  
+  &--patrick,
+  &--daniel {
+    border: solid 0.15rem hsla(263, 55%, 52%, 10%);
+  }
+}
+
+.attribution {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+  color: $Moderate-violet;
+
+  &:focus-visible {
+    outline: 0.2rem dotted $Very-dark-grayish-blue;
+  }
+}
+
